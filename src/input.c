@@ -1,11 +1,14 @@
 #include "../include/input.h"
 
-char* get_user_input() {
+char* get_user_input(char* prompt) {
     char* output_buffer = NULL;
     
     char input_buffer[BUFFER_SIZE + 1];
     int buffers_filled = 0;
     int index = 0;
+
+    if (prompt != NULL) { printf("%s\n", prompt); }
+    printf("> ");
     
     for (char c = getchar(); c != '\n'; c = getchar(), index++) {
         if (index == BUFFER_SIZE) {

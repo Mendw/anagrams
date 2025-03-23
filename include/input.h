@@ -4,4 +4,5 @@
 
 #define BUFFER_SIZE 20
 
-char* get_user_input();
+// Returns an arbitrarily long string of characters based on user input. Stops at `\n`
+char* get_user_input(char*);

@@ -1,10 +1,10 @@
 #include "../include/main.h"
 
 int main() {
-    char *first_string = get_user_input();
+    char *first_string = get_user_input("First phrase");
     int *first_charmap = get_charmap(first_string);
 
-    char *second_string = get_user_input();
+    char *second_string = get_user_input("Second phrase");
     int *second_charmap = get_charmap(second_string);
 
     bool is_anagram = charmap_eq(first_charmap, second_charmap);
